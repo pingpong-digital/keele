@@ -1,0 +1,30 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel watch ./wp-content/themes/pingpong/app/entry.js --out-dir ./wp-content/themes/pingpong/dev --out-file app",
+    "build": "parcel build ./wp-content/themes/pingpong/app/entry.js --out-dir ./wp-content/themes/pingpong/dist --out-file app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pingpong-digital/wordpress-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.23.7"
+  },
+  "bugs": {
+    "url": "https://github.com/pingpong-digital/wordpress-template/issues"
+  },
+  "homepage": "https://github.com/pingpong-digital/wordpress-template#readme",
+  "dependencies": {
+    "accordion-js": "^2.8.0",
+    "bourbon-neat": "^4.0.0",
+    "js": "^0.1.0"
+  }
+}

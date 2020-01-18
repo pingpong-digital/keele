@@ -1,0 +1,416 @@
+body {
+  overflow-x: hidden;
+}
+
+.fullsize-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagewidth {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  @include grid-container;
+}
+
+.separator {
+  margin-top: calc(6rem + 6px);
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 6px;
+    background-color: $color__blue;
+    top: -3.5rem;
+  }
+}
+
+header {
+  width: 100vw;
+  padding: 2em 0;
+  position: absolute;
+  
+  .site-branding {
+    @include grid-column(2, $desktop-grid);
+  }
+}
+
+section.hero {
+  .pagewidth {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .titles {
+      @include grid-column(10, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
+
+      h1, h2, h6 {
+        margin: 8px;
+        span {
+          display: inline-block;
+          padding: 10px 0;
+          color: $color__blue;
+          background-color: #fff;
+          box-shadow: -10px 0 #fff, 10px 0 #fff;
+          line-height: 1.35;
+        }
+      }
+
+      h2 span { color: $color__blue--dark; }
+      h6 {
+        span {
+          color: #fff;
+          background-color: $color__blue;
+          box-shadow: -10px 0 $color__blue, 10px 0 $color__blue;
+        }
+      }
+    }
+
+    .intro {
+      @include grid-column(5, $desktop-grid);
+      background-color: $color__blue;
+      color: #fff;
+      background-color: $color__blue;
+      padding: 1em 3em;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      font-size: 18px;
+      line-height: 2;
+      margin-bottom: -2.5em;
+
+      &:after {
+        content: "";
+        width: 999px;
+        height: 100%;
+        background-color: $color__blue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+section.about {
+  padding: 120px 0 60px;
+  .pagewidth {
+    h2 {
+      @include grid-column(10, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
+      color: $color__blue--dark;
+    }
+
+    .content {
+      @include grid-column(6, $desktop-grid);
+      @include grid-push(2, $desktop-grid);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 2;
+
+      .portrait-size {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-left: 4em;
+      }
+    }
+
+    .images {
+      @include grid-column(10, $desktop-grid);
+      @include grid-push(2, $desktop-grid);
+      margin-top: 4em;
+
+    }
+  }
+}
+
+section.keele-life {
+  margin: 20px 0 60px 0;
+
+  .pagewidth {
+    h3,
+    .content {
+      @include grid-column(10, $desktop-grid);
+      @include grid-push(2, $desktop-grid);
+
+      p {
+        column-count: 2;
+        column-gap: 20px;
+      }
+    }
+
+    h3 {
+      color: $color__blue--dark;
+    }
+  }
+}
+
+section.stats {
+  .pagewidth {
+    padding-top: 5em;
+
+    .container {
+      @include grid-column(5, $desktop-grid);
+      background-color: $color__blue;
+      color: #fff;
+      margin-bottom: -5em;
+      padding: 5em 3em;
+
+      ul {
+        padding: 0;
+        border-bottom: 1px solid #fff;
+        li {
+          display: flex;
+          padding: 15px 0 2em;
+          border-top: 1px solid #fff;
+          
+          .item {
+            flex-basis: 50%;
+            h1 {
+              font-size: 16px;
+              margin: 0 0 4px;
+            }
+
+            h2 {
+              font-size: 14px;
+              font-weight: 300;
+            }
+          }
+
+          .stat {
+            h1 {
+              line-height: .75em;
+              font-family: "Helvetica Neue", Helvetica, sans-serif;
+              small {
+                font-size: 22px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.academic {
+  margin-top: 150px;
+  margin-bottom: 100px;
+
+  .pagewidth {
+    .img {
+      @include grid-column(7, $desktop-grid);
+      padding-top: 50%;
+    }
+
+    .content {
+      @include grid-column(5, $desktop-grid);
+      margin-top: 3em;
+
+      h3 {
+        margin-left: -3em;
+        color: $color__blue--dark;
+      }
+
+      .separator {
+        margin-left: 2em;
+      }
+    }
+  }
+}
+
+section.investments {
+  margin: 100px 0;
+  .pagewidth {
+    position: relative;
+    > .content {
+      position: relative;
+      @include grid-column(10, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
+      margin-bottom: 3em;
+
+      h3 {
+        color: $color__blue--dark;
+      }
+
+      img {
+        position: absolute;
+        width: 40%;
+        right: 0;
+        top: 0;
+      }
+
+      .content {
+        width: 50%;
+      }
+    }
+
+    img.bigger {
+      @include grid-column(8, $desktop-grid);
+    }
+
+    img.smaller {
+      @include grid-column(6, $desktop-grid);
+      position: absolute;
+      right: 0;
+      bottom: -4em;
+    }
+  }
+}
+
+section.employment {
+  margin: 150px 0 120px;
+
+  .pagewidth {
+    h3 {
+      color: $color__blue--dark;
+      @include grid-column(3, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 6px;
+        background-color: $color__blue;
+        bottom: -3rem;
+        left: 0;
+
+      }
+    }
+
+    .content {
+      @include grid-column(7, $desktop-grid);
+    }
+
+    .logos {
+      @include grid-column(10, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
+      margin-top: 3em;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+section.student-story {
+  margin: 100px 0;
+  .pagewidth {
+    position: relative;
+
+    .img {
+      @include grid-column(8, $desktop-grid);
+    }
+
+    .copy {
+      @include grid-column(7, $desktop-grid);
+      color: #fff;
+      background-color: $color__blue;
+      padding: 4em 4em 3em;
+      position: absolute;
+      top: 4em;
+      right: 20px;
+
+      .separator { margin-top: calc(4rem + 6px); }
+      .separator:before {
+        background-color: #fff;
+        top: -2.5rem;
+      }
+    }
+  }
+}
+
+section.course {
+  margin: 140px 0;
+  .titles {
+    @include grid-column(4, $desktop-grid);
+
+    h2 {
+      color: $color__blue--dark;
+    }
+    .content {
+      font-size: 18px;
+      line-height: 2;
+      font-weight: 700;
+    }
+  }
+
+  .accordion {
+    @include grid-column(7, $desktop-grid);
+    @include grid-push(1, $desktop-grid);
+  }
+}
+
+.accordion-container {
+
+  .ac {
+    margin-top: 0;
+    border: none;
+    border-top: 1px solid #B7B7B7;
+
+    &:last-of-type {
+      border-bottom: 1px solid #B7B7B7;
+    }
+
+    .ac-q {
+      font-size: 28px;
+      font-weight: 900;
+      color: $color__blue;
+      padding: .5em 0;
+    }
+
+    .ac-a {
+      p {
+        padding: 0 0 1em;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      a {
+        color: $color__blue;
+        text-decoration: none;
+        border-bottom: 1px solid $color__blue;
+      }
+    }
+  }
+}
+
+footer {
+  color: #fff;
+  background-color: $color__black;
+  padding: 2em 0;
+
+  .pagewidth {
+    .part-1 {
+      @include grid-column(4, $desktop-grid);
+    }
+
+    .part-2 {
+      @include grid-column(2, $desktop-grid);
+    }
+
+    .part-3 {
+      @include grid-column(3, $desktop-grid);
+    }
+
+    .part-4 {
+      @include grid-column(3, $desktop-grid);
+      background-image: url('./../../img/map.png');
+      background-size: 156px 268px;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+version: '2'
+services:
+    web:
+        image: wordpress:5.3
+        restart: unless-stopped
+        environment:
+            WORDPRESS_DB_HOST: db:3306
+            WORDPRESS_DB_PASSWORD: 123456
+            # Database Name, eg. stirling
+            WORDPRESS_DB_NAME: keele
+            # Virtual host for nginx-proxy, eg. stirling.test
+            VIRTUAL_HOST: keele.test
+        volumes:
+            - "./wp-content:/var/www/html/wp-content"
+            - "./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini"
+networks:
+    default:
+        external:
+            name: nginx-proxy
