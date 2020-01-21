@@ -387,6 +387,59 @@ section.course {
   }
 }
 
+section.form {
+  background-color: $color__blue--dark;
+  padding: 3em 0;
+  color: #fff;
+  text-align: center;
+
+  .pagewidth {
+    .container {
+      @include grid-column(8, $desktop-grid);
+      @include grid-push(2, $desktop-grid);
+
+      .text {
+        margin-top: 1em;
+      }
+
+      .form-container {
+        margin-top: 3em;
+
+        ul {
+          li {
+            margin: 1em 0;
+
+            label {
+              float: left;
+              width: 33.3%;
+              text-align: right;
+              padding-right: 1em;
+            }
+
+            > span {
+              position: relative;
+              display: inline-block;
+              width: 66.6%;
+              input, textarea {
+                width: 100%;
+              }
+
+              .wpcf7-not-valid-tip {
+                text-align: left;
+              }
+            }
+          }
+        }
+
+        .wpcf7-response-output {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
 footer {
   color: #fff;
   background-color: $color__black;
