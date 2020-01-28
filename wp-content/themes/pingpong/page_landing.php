@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<section class="hero fullsize-bg" style="background-image: url(/wp-content/uploads/home-hero.jpg">
+<section class="hero fullsize-bg" style="background-image: url(/wp-content/uploads/hall-cropped.jpg); background-position:top;">
 
   <div class="pagewidth">
     <div class="titles">

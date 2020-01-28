@@ -30,6 +30,7 @@
 		<div class="pagewidth">
 			<div class="part-1">
 				© University of Keele 2019 版权所有
+				<img src="/wp-content/uploads/tef-gold.png" alt="TEF Gold" class="tef">
 			</div>
 			<div class="part-2">
 				<b>关注我们</b> 微博  微信

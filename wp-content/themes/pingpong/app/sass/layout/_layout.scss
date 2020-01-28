@@ -36,7 +36,7 @@ header {
   position: absolute;
   
   .site-branding {
-    @include grid-column(2, $desktop-grid);
+    @include grid-column(2.5, $desktop-grid);
   }
 }
 
@@ -445,13 +445,18 @@ footer {
   background-color: $color__black;
   padding: 2em 0;
 
+  .tef {
+    width: 200px;
+    margin-top: 10px;
+  }
+
   .pagewidth {
     .part-1 {
       @include grid-column(4, $desktop-grid);
     }
 
     .part-2 {
-      @include grid-column(2, $desktop-grid);
+      @include grid-column(3, $desktop-grid);
     }
 
     .part-3 {
@@ -459,10 +464,10 @@ footer {
     }
 
     .part-4 {
-      @include grid-column(3, $desktop-grid);
+      @include grid-column(2, $desktop-grid);
       background-image: url('./../../img/map.png');
       background-size: 156px 268px;
-      background-position: center top;
+      background-position: right top;
       background-repeat: no-repeat;
     }
   }
