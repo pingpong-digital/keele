@@ -29,7 +29,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="pagewidth">
 			<div class="part-1">
-				© University of Keele 2019 版权所有
+				<p>© University of Keele 2019 版权所有</p>
 				<img src="/wp-content/uploads/tef-gold.png" alt="TEF Gold" class="tef">
 			</div>
 			<div class="part-2">

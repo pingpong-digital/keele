@@ -26,7 +26,17 @@ body {
     width: 60px;
     height: 6px;
     background-color: $color__blue;
-    top: -3.5rem;
+    top: -2.5rem;
+  }
+
+  @include mobile {
+    margin-top: calc(4rem + 4px);
+
+    &:before {
+      top: -2rem;
+      height: 4px;
+      width: 40px;
+    }
   }
 }
 
@@ -37,6 +47,10 @@ header {
   
   .site-branding {
     @include grid-column(2.5, $desktop-grid);
+
+    @include mobile {
+      @include grid-column(2, $mobile-grid);
+    }
   }
 }
 
@@ -51,6 +65,10 @@ section.hero {
     .titles {
       @include grid-column(10, $desktop-grid);
       @include grid-push(1, $desktop-grid);
+      
+      @include mobile {
+        @include grid-column(4, $mobile-grid);
+      }
 
       h1, h2, h6 {
         margin: 8px;
@@ -98,12 +116,31 @@ section.hero {
         top: 0;
         z-index: -1;
       }
+
+      @include mobile {
+        @include grid-column(4, $mobile-grid);
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        padding: 1.5em 2em 1em;
+
+        &:after {
+          width: 20px;
+          left: 100%;
+        }
+      }
     }
   }
 }
 
 section.about {
   padding: 120px 0 60px;
+
+  @include mobile {
+    padding: 80px 0 30px;
+  }
+
+
   .pagewidth {
     h2 {
       @include grid-column(10, $desktop-grid);
@@ -132,11 +169,38 @@ section.about {
       margin-top: 4em;
 
     }
+
+    @include mobile {
+      h2 {
+        @include grid-column(4, $mobile-grid);
+        @include grid-push(0);
+      }
+
+      .content {
+        @include grid-column(3, $mobile-grid);
+        @include grid-push(1, $mobile-grid);
+        font-size: 16px;
+
+        .portrait-size {
+          display: none;
+        }
+      }
+
+      .images {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2em;
+      }
+    }
   }
 }
 
 section.keele-life {
   margin: 20px 0 60px 0;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 
   .pagewidth {
     h3,
@@ -152,6 +216,12 @@ section.keele-life {
 
     h3 {
       color: $color__blue--dark;
+    }
+
+    @include mobile {
+      h3, .content {
+        @include grid-column(4, $mobile-grid);
+      }
     }
   }
 }
@@ -201,12 +271,50 @@ section.stats {
         }
       }
     }
+    
+    @include mobile {
+      padding-top: 3em;
+
+      .container {
+        @include grid-column(3, $mobile-grid);
+        padding: 2em 1em;
+        margin-bottom: -3em;
+
+        ul {
+          li {
+            .item {
+              h1 {
+                font-size: 14px;
+              }
+              h2 {
+                font-size: 10px;
+              }
+            }
+
+            .stat {
+              h1 {
+                font-size: 28px;
+                small {
+                  font-size: 14px;
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 section.academic {
   margin-top: 150px;
   margin-bottom: 100px;
+
+  @include mobile {
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
 
   .pagewidth {
     .img {
@@ -223,8 +331,33 @@ section.academic {
         color: $color__blue--dark;
       }
 
+      ul {
+        padding-left: 0;
+      }
+
       .separator {
         margin-left: 2em;
+      }
+    }
+
+    @include mobile {
+      .img {
+        margin-left: 0;
+        width: calc(75% - 15px);
+      }
+
+      .content {
+        @include grid-column(3, $mobile-grid);
+        @include grid-push(1, $mobile-grid);
+        margin-top: -1em;
+
+        h3 {
+          margin-left: 0;
+        }
+
+        .separator {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -232,8 +365,14 @@ section.academic {
 
 section.investments {
   margin: 100px 0;
+
+  @include mobile {
+    margin: 60px 0;
+  }
+
   .pagewidth {
     position: relative;
+
     > .content {
       position: relative;
       @include grid-column(10, $desktop-grid);
@@ -266,11 +405,39 @@ section.investments {
       right: 0;
       bottom: -4em;
     }
+
+    @include mobile {
+    > .content {
+        @include grid-column(3, $mobile-grid);
+        margin-bottom: 1em;
+
+        img {
+          display: none;
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+    }
+
+    img.bigger{
+      margin-left: 0;
+      width: 100%
+    }
+
+    img.smaller {
+      display: none;
+    }
   }
 }
 
 section.employment {
   margin: 150px 0 120px;
+
+  @include mobile {
+    margin: 60px 0;
+  }
 
   .pagewidth {
     h3 {
@@ -302,11 +469,41 @@ section.employment {
       display: flex;
       justify-content: space-between;
     }
+
+    @include mobile {
+      h3 {
+        @include grid-column (1.5, $mobile-grid);
+
+        &:after {
+          width: 40px;
+          height: 4px;
+          bottom: -2rem;
+        }
+      }
+
+      .content {
+        @include grid-column(2.5, $mobile-grid);
+      }
+
+      .logos {
+        width: 100%;
+        margin-left: 0;
+
+        .logo {
+          padding: 0 10px;
+        }
+      }
+    }
   }
 }
 
 section.student-story {
   margin: 100px 0;
+
+  @include mobile {
+    margin: 60px 0;
+  }
+
   .pagewidth {
     position: relative;
 
@@ -329,11 +526,29 @@ section.student-story {
         top: -2.5rem;
       }
     }
+
+    @include mobile {
+      .img {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .copy {
+        width: 100%;
+        margin-left: 0;
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: -10px;
+        padding: 2em;
+      }
+    }
   }
 }
 
 section.course {
   margin: 140px 0;
+
   .titles {
     @include grid-column(4, $desktop-grid);
 
@@ -350,6 +565,23 @@ section.course {
   .accordion {
     @include grid-column(7, $desktop-grid);
     @include grid-push(1, $desktop-grid);
+  }
+
+  @include mobile {
+    margin: 80px 0 60px;
+
+    .titles {
+      @include grid-column(4, $mobile-grid);
+
+      .content {
+        font-size: 14px;
+      }
+    }
+
+    .accordion {
+      @include grid-column(4, $mobile-grid);
+      margin-top: 30px;
+    }
   }
 }
 
@@ -382,6 +614,21 @@ section.course {
         color: $color__blue;
         text-decoration: none;
         border-bottom: 1px solid $color__blue;
+      }
+    }
+  }
+
+  @include mobile {
+    .ac {
+      .ac-q {
+        font-size: 16px;
+        padding: 1em 0;
+      }
+
+      .ac-a {
+        p {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -438,6 +685,22 @@ section.form {
       }
     }
   }
+
+  @include mobile {
+    padding: 2em 0;
+
+    .pagewidth {
+      .container {
+        @include grid-column(4, $mobile-grid);
+
+        .form-container {
+          ul {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -469,6 +732,41 @@ footer {
       background-size: 156px 268px;
       background-position: right top;
       background-repeat: no-repeat;
+    }
+  }
+
+  @include mobile {
+    p {
+      margin-bottom: 0;
+    }
+
+    .pagewidth {
+      .part-1,
+      .part-2,
+      .part-3{
+        width: calc(50% - 10px);
+      }
+
+      .tef {
+        width: 150px;
+      }
+
+      .part-2,
+      .part-3 {
+        margin-top: 1em;
+      }
+
+      .part-4 {
+        width: calc(50% - 10px);
+        height: 100%;
+        position: absolute;
+        right: 20px;
+        background-size: contain;
+
+        img {
+          display: none;
+        }
+      }
     }
   }
 }
