@@ -17,7 +17,7 @@ body {
 }
 
 .separator {
-  margin-top: calc(6rem + 6px);
+  margin-top: calc(5rem + 6px);
   position: relative;
 
   &:before {
@@ -26,14 +26,14 @@ body {
     width: 60px;
     height: 6px;
     background-color: $color__blue;
-    top: -2.5rem;
+    top: -3rem;
   }
 
   @include mobile {
-    margin-top: calc(4rem + 4px);
+    margin-top: calc(4.5rem + 4px);
 
     &:before {
-      top: -2rem;
+      top: -2.5rem;
       height: 4px;
       width: 40px;
     }

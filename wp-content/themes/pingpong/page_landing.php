@@ -239,11 +239,5 @@ get_header();
   </div>
 </section>
 
-<section class="contact-form">
-  <div class="pagewidth">
-
-  </div>
-</section>
-
 <?php
 get_footer();

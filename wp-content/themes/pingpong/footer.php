@@ -18,7 +18,7 @@
 				<h2>联系我们</h2>
 				<div class="text">大家好，我是Jennifer翟，基尔大学中国代表。关于在基尔大学学习的方方面面，你都可以通过以下联系方式联系我咨询和了解。<br>
 				电话：+86 15710071811<br>
-电邮：<a style="color: #fff" href="mailto:j.zhai@keele.ac.uk">j.zhai@keele.ac.uk</a></div>
+电邮：<a style="color: #fff" href="mailto:international@keele.ac.uk">international@keele.ac.uk</a></div>
 				<div class="form-container">
 					<?php echo do_shortcode('[contact-form-7 id="28" title="main-form"]'); ?>
 				</div>
