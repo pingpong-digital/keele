@@ -49,7 +49,7 @@ get_header();
   </div>
 </section>
 
-<section class="stats fullsize-bg" style="background-image: url(/wp-content/uploads/graduation.jpg;">
+<section class="stats fullsize-bg" style="background-image: url(/wp-content/uploads/graduation.jpg;)">
   <div class="pagewidth">
     <div class="container" width="200">
       <ul>
