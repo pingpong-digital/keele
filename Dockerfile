@@ -20,7 +20,7 @@ RUN \
   # 3. Calls original docker-entrypoint.sh
  && echo '#!/bin/bash' >> /usr/local/bin/docker-entrypoint-wrapper.sh \
  && echo 'set -euo pipefail' >> /usr/local/bin/docker-entrypoint-wrapper.sh \
- && echo 'echo "127.0.0.1 $(hostname) localhost localhost.localdomain" >> /etc/hosts' >> /usr/local/bin/docker-entrypoint-wrapper.sh \
+ && echo 'echo "127.0.0.1 $(hostname) localhost keeleuniversity.cn" >> /etc/hosts' >> /usr/local/bin/docker-entrypoint-wrapper.sh \
  && echo 'service sendmail restart' >> /usr/local/bin/docker-entrypoint-wrapper.sh \
  && echo 'exec docker-entrypoint.sh "$@"' >> /usr/local/bin/docker-entrypoint-wrapper.sh \
  && chmod +x /usr/local/bin/docker-entrypoint-wrapper.sh
