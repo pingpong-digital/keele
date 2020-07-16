@@ -121,8 +121,8 @@ add_action( 'widgets_init', 'pingpong_widgets_init' );
  */
 function pingpong_scripts() {
 	$compiled_dir = is_development_environment() ? '/dev/' : '/dist/';
-	wp_enqueue_style('pingpong-style', get_template_directory_uri() . $compiled_dir . 'app.css', [], 0.6);
-	wp_enqueue_script('pingpong-script', get_template_directory_uri() . $compiled_dir . 'app.js', ['jquery'], 0.6, true);
+	wp_enqueue_style('pingpong-style', get_template_directory_uri() . $compiled_dir . 'app.css', [], 0.7);
+	wp_enqueue_script('pingpong-script', get_template_directory_uri() . $compiled_dir . 'app.js', ['jquery'], 0.7, true);
 }
 add_action( 'wp_enqueue_scripts', 'pingpong_scripts' );
 
