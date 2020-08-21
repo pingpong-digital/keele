@@ -52,9 +52,9 @@
 	<header id="masthead" class="site-header">
 		<div class="pagewidth">
 			<div class="site-branding">
-				<div class="logo">
+				<a class="logo" href="/">
 					<img src="/wp-content/themes/pingpong/img/logo.png" alt="logo">
-				</div>
+				</a>
 			</div><!-- .site-branding -->
 		</div>
 

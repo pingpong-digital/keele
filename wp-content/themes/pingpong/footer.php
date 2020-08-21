@@ -11,14 +11,6 @@
 
 ?>
 
-	</div><!-- #content -->
-	<section class="form">
-		<div class="pagewidth">
-			<div class="container">
-				<h2>联系我们</h2>
-				<div class="text">大家好，我是Jennifer翟，基尔大学中国代表。关于在基尔大学学习的方方面面，你都可以通过以下联系方式联系我咨询和了解。<br>
-				电话：+86 15710071811<br>
-电邮：<a style="color: #fff" href="mailto:international@keele.ac.uk">international@keele.ac.uk</a></div>
 				<div class="form-container">
 					<?php echo do_shortcode('[contact-form-7 id="28" title="main-form"]'); ?>
 				</div>
@@ -33,7 +25,19 @@
 				<img src="/wp-content/uploads/tef-gold.png" alt="TEF Gold" class="tef">
 			</div>
 			<div class="part-2">
-				<b>关注我们</b> 微博  微信
+				<b>关注我们</b> 
+				<div class="social-media">
+					<div class="social-media__item social-media__wechat">
+						<span class="social-media__name wechat">微信</span>
+						<span class="qrcode">
+							<img src="/wp-content/uploads/qrcode.jpg" alt="QR Code">
+						</span>
+					</div>
+					<a class="social-media__item social-media__weibo" target="_blank" href="https://weibo.com/2148467014">
+						<span class="social-media__name weibo">微博</span>
+					</a>
+				</div>
+				
 			</div>
 			<div class="part-3">
 				基尔大学 <br>
