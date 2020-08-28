@@ -56,17 +56,15 @@
 					<img src="/wp-content/themes/pingpong/img/logo.png" alt="logo">
 				</a>
 			</div><!-- .site-branding -->
-		</div>
 
-		<!-- <nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pingpong' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav> --> 
+			<nav>
+					<?php if (is_front_page()): ?>
+						<a href="/kiite"> 创新与优质教学研究所 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<?php else: ?>
+						<a href="/"> 基尔大学主页 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<?php endif ?>
+			</nav>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

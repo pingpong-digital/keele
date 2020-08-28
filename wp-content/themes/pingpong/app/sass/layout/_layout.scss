@@ -46,15 +46,62 @@ header {
   z-index: 99;
   position: absolute;
   
-  .site-branding {
-    @include grid-column(2.5, $desktop-grid);
+  .pagewidth {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
 
-    @include mobile {
-      @include grid-column(2, $mobile-grid);
+    .site-branding {
+      width: 220px;
+  
+      @include mobile {
+        width: 120px;
+      }
+  
+      .logo {
+        display: block;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+  
+    &:after {
+      content: none;
     }
 
-    .logo {
-      display: block;
+    nav {
+      a {
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 800;
+        background-color: $color__blue;
+        padding: 4px 22px 4px 15px;
+        border-radius: 4px;
+        line-height: 1.5;
+
+        &:after {
+          content: "";
+          width: 8px;
+          height: 100%;
+          background-image: url(./../../img/chevron.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 0px;
+          right: 9px;
+        }
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
@@ -139,7 +186,12 @@ section.hero {
 
   &.hero--short {
     .pagewidth {
-      height: 65vh;
+      height: 75vh;
+
+      h1 span {
+        display: inline;
+        line-height: 2;
+      }
     }
   }
 }
@@ -786,11 +838,17 @@ footer {
 
 
 section.kiite-intro {
+  margin: 60px 0;
+
   .pagewidth {
+    .media {
+      @include grid-column(5, $desktop-grid);
+    }
+
     .content-container {
       padding: 60px 0 0;
-      @include grid-column(8, $desktop-grid);
-      @include grid-push(2, $desktop-grid);
+      @include grid-column(6, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
 
       .title {
         margin-bottom: 20px;
@@ -800,7 +858,13 @@ section.kiite-intro {
   }
 
   @include mobile {
+    margin-bottom: 0;
+
     .pagewidth {
+
+      .media {
+        @include grid-column(4, $mobile-grid);
+      }
       .content-container {
         padding: 30px 0;
         @include grid-column(4, $mobile-grid);
@@ -824,6 +888,12 @@ section.keele-intro {
       padding: 45px;
       color: #fff;
       font-weight: 600;
+
+      a {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        text-decoration: none;
+      }
     }
   }
 
@@ -849,24 +919,28 @@ section.kiite-features {
     align-items: center;
 
     .left {
-      @include grid-column(4, $desktop-grid);
+      @include grid-column(5, $desktop-grid);
       font-weight: 600;
-      position: relative;
 
-      &:before {
-        content: "";
-        width: 45px;
-        height: 6px;
-        background-color: $color__blue--light;
-        position: absolute;
-        top: -36px;
-        left: 0;
+      .content-container {
+        position: relative;
+        margin-top: 70px;
+
+        &:before {
+          content: "";
+          width: 45px;
+          height: 6px;
+          background-color: $color__blue--light;
+          position: absolute;
+          top: -36px;
+          left: 0;
+        }
       }
     }
 
     .right {
       @include grid-column(6, $desktop-grid);
-      @include grid-push(2, $desktop-grid);
+      @include grid-push(1, $desktop-grid);
 
       ul {
         li {
@@ -902,6 +976,7 @@ section.kiite-features {
 
     .pagewidth {
       flex-direction: column;
+      align-items: flex-start;
 
       .left {
         @include grid-column(4, $mobile-grid);
