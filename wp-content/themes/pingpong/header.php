@@ -59,7 +59,7 @@
 
 			<nav>
 					<?php if (is_front_page()): ?>
-						<a href="/kiite"> 创新与优质教学研究所 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+						<a href="/kiite"> 创新与卓越教育研究院 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 					<?php else: ?>
 						<a href="/"> 基尔大学主页 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 					<?php endif ?>
