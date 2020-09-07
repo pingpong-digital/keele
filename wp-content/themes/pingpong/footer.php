@@ -11,13 +11,6 @@
 
 ?>
 
-				<div class="form-container">
-					<?php echo do_shortcode('[contact-form-7 id="28" title="main-form"]'); ?>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<footer id="colophon" class="site-footer">
 		<div class="pagewidth">
 			<div class="part-1">
