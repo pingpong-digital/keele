@@ -73,6 +73,8 @@
 					<?php else: ?>
 						<a href="/"> 基尔大学主页 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 					<?php endif ?>
+					<a href="/contact"> 联系我们 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+
 			</nav>
 		</div>
 	</header><!-- #masthead -->

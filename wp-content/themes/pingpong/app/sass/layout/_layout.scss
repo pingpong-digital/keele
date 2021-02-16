@@ -84,6 +84,7 @@ header {
         padding: 4px 22px 4px 15px;
         border-radius: 4px;
         line-height: 1.5;
+        margin: 0 12px;
 
         &:after {
           content: "";
@@ -102,7 +103,21 @@ header {
           font-size: 12px;
         }
       }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        a {
+          margin: 4px;
+        }
+      }
     }
+  }
+
+  @include mobile {
+    padding: 1em 0;
   }
 }
 
